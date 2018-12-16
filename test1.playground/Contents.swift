@@ -30,3 +30,18 @@ var height:Double=180.5
 var weight:Double=72.5
 
 print("이름 : \(name), 키 : \(height), 몸무게: \(weight)")
+
+// Swift study 01
+var name1 : String = "나"
+var name2 : String = "mac"
+
+print("1번 : \(name1)")
+print("2번 : \(name2)")
+
+let str1 : String = "20"
+let str2 : String = "24"
+
+var age1 : Int? = Int(str1)
+var age2 : Int? = Int(str2)
+
+print("나이 : \(age1!), \(age2!)")

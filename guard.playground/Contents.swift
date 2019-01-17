@@ -48,3 +48,20 @@ func createDog(name:String, age:Int)->Dog?{
 if let dog1 = createDog(name:"미미", age:1){
     print("강아지 객체 : \(dog1.name!)")
 }
+
+
+// Swift study 05
+
+var animals:[String:Dog] = [:]
+
+if let dog2 = createDog(name:"초코", age:3){
+    animals[dog2.name!]=dog2
+    print("name : \(dog2.name!)")
+    print("dog no. : \(animals.count)")
+}
+
+if let dog3 = createDog(name:"소금", age:5){
+    animals[dog3.name!]=dog3
+    print("name : \(dog3.name!)")
+    print("dog no. : \(animals.count)")
+}

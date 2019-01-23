@@ -96,3 +96,36 @@ var person4 : Person4 = Person4()
 person4.name="강백호"
 var count = person4["강백호"]
 print("이름 문자열의 길이 : \(count)")
+
+
+// Swift study 08
+
+struct LimitedError : Error{
+    var code : Int
+    var message : String
+}
+
+class Dog{
+    var name : String!
+    var age : Int!
+    
+    init(name:String, age:Int){
+        self.name=name
+        self.age=age
+    }
+    func run(distance : Int) throws {
+        if distance > 10{
+            throw LimitedError(code:400, message:"너무 먼 거리")
+        }
+        print("걍아지 \(name)이(가) \(distance)km 달려갑니다.")
+    }
+}
+
+var dog1:Dog = Dog(name:"미미", age:1)
+do{
+    try dog1.run(distance:8)
+    try dog1.run(distance:12)
+} catch let error{
+    let errorInfo = error as! LimitedError
+    print("예외 발생함 : \(errorInfo.code), \(errorInfo.message)")
+}

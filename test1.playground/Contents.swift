@@ -7,7 +7,7 @@ print(message + value2)
 
 var value3 : String = "20"
 var value4 : Int? = Int(value3)
-print(value4)
+print(value3)
 print(value4!)
 
 
